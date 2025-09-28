@@ -2,7 +2,7 @@ import { useAuth } from "@clerk/clerk-react";
 
 // NEW LINE 1: This is the key. It reads the variable from Vercel's environment.
 // If it can't find it (like when you run locally), it uses 'http://localhost:8000' as a backup.
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = 'http://localhost:8000';
 
 export const useApi = () => {
     const { getToken } = useAuth();

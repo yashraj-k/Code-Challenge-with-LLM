@@ -50,8 +50,6 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
     try:
         model = genai.GenerativeModel('gemini-2.5-flash-preview-05-20')
         response = model.generate_content(prompt)
-
-        # Clean the response to ensure it's valid JSON
         cleaned_response_text = response.text.strip().replace("```json", "").replace("```", "")
         challenge_data = json.loads(cleaned_response_text)
 
