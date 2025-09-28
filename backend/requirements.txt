@@ -6,3 +6,4 @@ python-dotenv>=1.1.1
 sqlalchemy>=2.0.43
 svix>=1.76.1
 uvicorn>=0.37.0
+psycopg2-binary
