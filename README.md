@@ -1,3 +1,9 @@
+working images:
+<img width="1440" height="783" alt="image" src="https://github.com/user-attachments/assets/db543b78-1b17-464e-993c-5df69b6c4026" />
+<img width="1439" height="786" alt="image" src="https://github.com/user-attachments/assets/f4a4e98f-56d4-48b2-a82f-a94cba68e963" />
+<img width="1440" height="734" alt="image" src="https://github.com/user-attachments/assets/5e6c769a-0aef-42f6-a9df-192325acd6a4" />
+<img width="1440" height="786" alt="image" src="https://github.com/user-attachments/assets/69cee520-62e4-4d52-944c-dd073c733472" />
+
 
 #AI-Powered OOP Interview Prep Tool!
 This project is a full-stack application designed to help software developers prepare for technical interviews, focusing specifically on Object-Oriented Programming (OOP) concepts. It leverages Google's Gemini LLM to dynamically generate new challenges, ensuring a fresh and comprehensive study experience.
