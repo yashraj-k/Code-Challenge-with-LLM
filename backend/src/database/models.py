@@ -2,10 +2,22 @@ from sqlalchemy import Column , Integer,String , DateTime , create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
-engine = create_engine("sqlite:///database.db")
+
+load_dotenv()
+
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+
+engine = create_engine(DATABASE_URL)
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+
 Base = declarative_base()
-
 
 class Challenge(Base):
     __tablename__ = "challenge"
@@ -21,7 +33,7 @@ class Challenge(Base):
 class ChallengeQuota(Base):
     __tablename__ = "challenge_quota"
     id = Column(Integer , primary_key = True)
-    user_id = Column(Integer , nullable=False , unique=True)
+    user_id = Column(String , nullable=False , unique=True)
     quota_remaining = Column(Integer , nullable=False ,default=5)
     last_reset_date = Column(DateTime , default=datetime.now)
 
