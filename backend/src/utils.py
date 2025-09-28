@@ -11,7 +11,7 @@ clerk_sdk = Clerk(bearer_auth = os.getenv("CLERK_SECRET_KEY"))
 def authenticate_and_get_user_details(request):
     try:
         request_state = clerk_sdk.authenticate_request(request, AuthenticateRequestOptions(
-            authorized_parties= ["http://localhost:5174","http://localhost:5173","https://code-challenge-with-llm.vercel.app/"],
+            authorized_parties= ["http://localhost:5174","http://localhost:5173","https://code-challenge-with-llm.vercel.app"],
             jwt_key = os.getenv("JWT_KEY")
         ) )
         if not request_state.is_signed_in:
